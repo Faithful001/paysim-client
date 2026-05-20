@@ -133,17 +133,37 @@ export interface BillCategory {
 
 export interface Biller {
   id: string;
-  code: string;
   name: string;
-  categoryCode: string;
+  logo: string | null;
+  description: string;
+  short_name: string;
+  biller_code: string;
+  country_code: string;
 }
 
 export interface BillerItem {
-  id: string;
-  code: string;
+  id: number;
+  biller_code: string;
   name: string;
-  amount?: number;
-  description?: string;
+  default_commission: number;
+  date_added: string;
+  country: string;
+  is_airtime: boolean;
+  biller_name: string;
+  item_code: string;
+  short_name: string;
+  fee: number;
+  commission_on_fee: boolean;
+  reg_expression: string;
+  label_name: string;
+  amount: number | null;
+  is_resolvable: boolean;
+  group_name: string;
+  category_name: string;
+  is_data: boolean | null;
+  default_commission_on_amount: number | null;
+  commission_on_fee_or_amount: boolean | null;
+  validity_period: string | null;
 }
 
 export interface CustomerValidation {
