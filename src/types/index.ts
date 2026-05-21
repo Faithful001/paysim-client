@@ -43,11 +43,28 @@ export interface VirtualAccount {
 
 export interface Wallet {
   id: string;
-  userId: string;
-  balance: number;
+  user: {
+    id: string;
+    firstName: string;
+    lastName: string;
+    phoneNumber: string;
+    email: string;
+    password: string;
+    bvn: string | null;
+    createdAt: string;
+    updatedAt: string;
+  };
   currency: string;
-  virtualAccount: VirtualAccount;
+  balance: number;
+  status: string;
+  failureReason: string | null;
+  accountNumber: string;
+  bankName: string;
+  providerRef: string;
+  orderRef: string;
+  paymentNote: string | null;
   createdAt: string;
+  updatedAt: string;
 }
 
 // ─── Cards ─────────────────────────────────────────────────────────────────

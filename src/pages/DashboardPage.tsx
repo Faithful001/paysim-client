@@ -108,9 +108,7 @@ export function DashboardPage() {
             {balanceVisible ? formatCurrency(balance) : maskBalance(balance)}
           </p>
           <p className="text-white/60 text-xs">
-            {wallet?.virtualAccount?.accountNumber
-              ? `Virtual acct: ${wallet.virtualAccount.accountNumber}`
-              : "Available balance"}
+            {wallet?.accountNumber ? `Account no: ${wallet?.accountNumber}` : "Available balance"}
           </p>
         </div>
       </div>
